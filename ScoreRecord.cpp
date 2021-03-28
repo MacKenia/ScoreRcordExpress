@@ -87,10 +87,6 @@ void FirstLetter(int nCode, char& strLetter)
 	if(nCode >= 4684 && nCode < 4925) strLetter = 'X';
 	if(nCode >= 4925 && nCode < 5249) strLetter = 'Y';
 	if(nCode >= 5249 && nCode < 5590) strLetter = 'Z';
-	if(nCode == 8191) strLetter = 'Q';
-	if(nCode == 7456) strLetter = 'X';
-	if(nCode == 6991) strLetter = 'Y';
-	if(nCode == 7287) strLetter = 'Z';
 }
 
 int main()
