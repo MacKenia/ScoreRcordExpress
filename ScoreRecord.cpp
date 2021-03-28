@@ -97,7 +97,6 @@ int main()
 {
 	fstream file;
 	char pTemp[10], QR[5];
-	int nameLen = (int)strlen(pTemp);
 	char pTemp1[5];//保存汉字的首字母
 	cout << "请将姓名放入name.txt保存退出" << endl
 	<< "若有简拼相同者" << endl
@@ -105,9 +104,6 @@ int main()
 	<<"回车以继续";
 	cin.get();
 	file.open("name.txt",ios::in);
-	// file.getline(pTemp,10,'\n');
-	// cout << pTemp << endl;
-	// getchar();
 	while(!file.eof())
 	{
 		if(file.fail()) break;
@@ -119,8 +115,6 @@ int main()
 	}
 	file.close();
 	showRecord();
-	// GetFirstLetter(pTemp,pTemp1,5);
-	// cout << pTemp1 << endl;
 	cout << "现在开始录入成绩，请以大写的方式输入简拼(输入！退出，)：" << endl;
 	keybd_event(VK_CAPITAL,0,0,0);
 	keybd_event(VK_CAPITAL,0,KEYEVENTF_KEYUP,0);
