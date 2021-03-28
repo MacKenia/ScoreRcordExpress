@@ -27,7 +27,6 @@ int show(score stut)
     return 1;
 }
 
-//显示记录
 int showRecord()
 {
     for_each(scores.begin(),scores.end(),show);
@@ -87,6 +86,7 @@ void FirstLetter(int nCode, char& strLetter)
 	if(nCode >= 4684 && nCode < 4925) strLetter = 'X';
 	if(nCode >= 4925 && nCode < 5249) strLetter = 'Y';
 	if(nCode >= 5249 && nCode < 5590) strLetter = 'Z';
+	if(nCode == 7282||nCode == 8646) strLetter = 'X';
 }
 
 int main()
