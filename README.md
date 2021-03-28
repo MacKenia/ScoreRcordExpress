@@ -24,3 +24,5 @@ Excel表格会将回车后面的信息自动录入到下一个格子中，于是
 6.程序运行结束之后会生成名为score.txt的文件，其中便是已经拍好顺序的成绩，全选粘贴到Excel表格中的成绩栏即可
 
 ![s-s-copy](https://github.com/MacKenia/ScoreRcordExpress/blob/main/img/s-paste.gif)
+
+## 注意：由于本程序使用的是GBK2312编码版本较老，有些字的首拼无法识别，可联系我定制版本或者自己修改源代码或者采用同音字替换！
