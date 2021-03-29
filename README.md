@@ -11,7 +11,7 @@ Excel表格会将回车后面的信息自动录入到下一个格子中，于是
 
 ## 使用方法：
 
-1.下载release[![GitHub release (by tag)](https://img.shields.io/github/downloads/MacKenia/ScoreRcordExpress/1.0/total?color=%23&label=Donwload%20V2)](https://github.com/MacKenia/ScoreRcordExpress/releases/download/1.1/ScoreRcordExpress.zip)中的压缩包
+1.下载release[![GitHub release (by tag)](https://img.shields.io/github/downloads/MacKenia/ScoreRcordExpress/1.1/total?color=%23&label=Donwload%20V2)](https://github.com/MacKenia/ScoreRcordExpress/releases/download/1.1/ScoreRcordExpress.zip)中的压缩包
 
 2.使用g++编译或者vs等编译器编译ScoreRcord.cpp后生成exe文件
 
