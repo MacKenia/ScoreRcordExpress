@@ -21,9 +21,9 @@ vector<score>::iterator p;
 
 int show(score stut)
 { 
-    cout << "å§“å: " << stut.Cname << endl
-    << "ç®€æ‹¼: " << stut.Ename << endl
-    << "æˆç»©: " << stut.Score << endl << endl;
+    cout << "ÐÕÃû: " << stut.Cname << endl
+    << "¼òÆ´: " << stut.Ename << endl
+    << "³É¼¨: " << stut.Score << endl << endl;
     return 1;
 }
 
@@ -93,11 +93,11 @@ int main()
 {
 	fstream file;
 	char pTemp[10], QR[5];
-	char pTemp1[5];//ä¿å­˜æ±‰å­—çš„é¦–å­—æ¯
-	cout << "è¯·å°†å§“åæ”¾å…¥name.txtä¿å­˜é€€å‡º" << endl
-	<< "è‹¥æœ‰ç®€æ‹¼ç›¸åŒè€…" << endl
-	<<"è¯·åŠ ä¸€ä¸ªå­—åœ¨å…¶åå­—ä¸­åŠ ä»¥åŒºåˆ†" << endl
-	<<"å›žè½¦ä»¥ç»§ç»­";
+	char pTemp1[5];//±£´æºº×ÖµÄÊ××ÖÄ¸
+	cout << "Çë½«ÐÕÃû·ÅÈëname.txt±£´æÍË³ö" << endl
+	<< "ÈôÓÐ¼òÆ´ÏàÍ¬Õß" << endl
+	<<"Çë¼ÓÒ»¸ö×ÖÔÚÆäÃû×ÖÖÐ¼ÓÒÔÇø·Ö" << endl
+	<<"»Ø³µÒÔ¼ÌÐø";
 	cin.get();
 	file.open("name.txt",ios::in);
 	while(!file.eof())
@@ -111,26 +111,26 @@ int main()
 	}
 	file.close();
 	showRecord();
-	cout << "çŽ°åœ¨å¼€å§‹å½•å…¥æˆç»©ï¼Œè¯·ä»¥å¤§å†™çš„æ–¹å¼è¾“å…¥ç®€æ‹¼(è¾“å…¥ï¼é€€å‡ºï¼Œ)ï¼š" << endl;
+	cout << "ÏÖÔÚ¿ªÊ¼Â¼Èë³É¼¨£¬ÇëÒÔ´óÐ´µÄ·½Ê½ÊäÈë¼òÆ´(ÊäÈë£¡ÍË³ö£¬)£º" << endl;
 	keybd_event(VK_CAPITAL,0,0,0);
 	keybd_event(VK_CAPITAL,0,KEYEVENTF_KEYUP,0);
 	while(true)
 	{
 		int S;
-		cout << "è¯·è¾“å…¥åŒå­¦çš„ç®€æ‹¼ï¼š";
+		cout << "ÇëÊäÈëÍ¬Ñ§µÄ¼òÆ´£º";
 		cin >> QR;
 		if(QR[0] == '!') break;
 		cin.ignore();
 		p = find(scores.begin(),scores.end(),QR);
 		if(strcmp(p->Ename,QR))
 		{
-			cout << "ä¸ºæ‰¾åˆ°è¯¥åŒå­¦ï¼Œè¯·æ ¸å¯¹ï¼æˆ–è€…é‡æ–°è¾“å…¥ï¼š";
+			cout << "ÎªÕÒµ½¸ÃÍ¬Ñ§£¬ÇëºË¶Ô£¡»òÕßÖØÐÂÊäÈë£º";
 			cin >> QR;
 			cin.ignore();
 			p = find(scores.begin(),scores.end(),QR);
 		}
-		cout << "è¯¥åŒå­¦çš„åå­—ä¸º: " << p->Cname << endl;
-		cout << "è¯·è¾“å…¥æˆç»©: ";
+		cout << "¸ÃÍ¬Ñ§µÄÃû×ÖÎª: " << p->Cname << endl;
+		cout << "ÇëÊäÈë³É¼¨: ";
 		cin >> S;
 		p -> Score = S;
 	}
