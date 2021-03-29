@@ -1,7 +1,7 @@
 # ScoreRcordExpress
 ## A program for quick score recording
 
- ![GitHub](https://img.shields.io/github/license/MacKenia/ScoreRcordExpress)
+ [![GitHub](https://img.shields.io/github/license/MacKenia/ScoreRcordExpress)]([ScoreRcordExpress/LICENSE at main · MacKenia/ScoreRcordExpress (github.com)](https://github.com/MacKenia/ScoreRcordExpress/blob/main/LICENSE))
 
 在统计同学成绩时，还在为不断地翻找名字，不断翻找作业本吗？这个项目帮你解决了将作业本上的成绩录入Excel表格的复杂操作。
 
@@ -11,7 +11,7 @@ Excel表格会将回车后面的信息自动录入到下一个格子中，于是
 
 ## 使用方法：
 
-1.下载release中的压缩包
+1.下载release[![GitHub release (by tag)](https://img.shields.io/github/downloads/MacKenia/ScoreRcordExpress/1.0/total?color=%23&label=Donwload%20V1)](https://github.com/MacKenia/ScoreRcordExpress/releases/download/1.0/ScoreRcordExpress.zip)中的压缩包
 
 2.使用g++编译或者vs等编译器编译ScoreRcord.cpp后生成exe文件
 
