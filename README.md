@@ -1,7 +1,7 @@
 # ScoreRcordExpress
 ## A program for quick score recording
 
- [![GitHub](https://img.shields.io/github/license/MacKenia/ScoreRcordExpress)]([ScoreRcordExpress/LICENSE at main · MacKenia/ScoreRcordExpress (github.com)](https://github.com/MacKenia/ScoreRcordExpress/blob/main/LICENSE))
+ [![GitHub](https://img.shields.io/github/license/MacKenia/ScoreRcordExpress)](https://github.com/MacKenia/ScoreRcordExpress/blob/main/LICENSE))
 
 在统计同学成绩时，还在为不断地翻找名字，不断翻找作业本吗？这个项目帮你解决了将作业本上的成绩录入Excel表格的复杂操作。
 
