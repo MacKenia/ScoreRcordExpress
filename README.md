@@ -1,6 +1,8 @@
 # ScoreRcordExpress
 ## A program for quick score recording
 
+还在为不断地
+
 ## 起源：
 
 Excel表格会将回车后面的信息自动录入到下一个格子中，于是诞生了这个程序
@@ -15,7 +17,7 @@ Excel表格会将回车后面的信息自动录入到下一个格子中，于是
 
 4.将Excel名单粘贴到name.txt备用
 
-![s-s-copy](https://github.com/MacKenia/ScoreRcordExpress/blob/main/img/s-s-copy.gif)
+![s-s-copy](https://github.com/MacKenia/ScoreRcordExpress/blob/main/img/s-copy.gif)
 
 5.运行生成的exe文件
 
