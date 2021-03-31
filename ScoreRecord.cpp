@@ -112,8 +112,11 @@ int main()
 	file.close();
 	showRecord();
 	cout << "现在开始录入成绩，请以大写的方式输入简拼(输入！退出，)：" << endl;
-	keybd_event(VK_CAPITAL,0,0,0);
-	keybd_event(VK_CAPITAL,0,KEYEVENTF_KEYUP,0);
+	if(!GetKeyState(VK_CAPITAL))
+	{
+		keybd_event(VK_CAPITAL,0,0,0);
+		keybd_event(VK_CAPITAL,0,KEYEVENTF_KEYUP,0);
+	}
 	while(true)
 	{
 		int S;
@@ -122,7 +125,7 @@ int main()
 		if(QR[0] == '!') break;
 		cin.ignore();
 		p = find(scores.begin(),scores.end(),QR);
-		if(strcmp(p->Ename,QR))
+		while(strcmp(p->Ename,QR)) 
 		{
 			cout << "为找到该同学，请核对！或者重新输入：";
 			cin >> QR;
@@ -141,8 +144,11 @@ int main()
 		file << p->Score << endl;
 	}
 	file.close();
-	keybd_event(VK_CAPITAL,0,0,0);
-	keybd_event(VK_CAPITAL,0,KEYEVENTF_KEYUP,0);
+	if(GetKeyState(VK_CAPITAL))
+	{
+		keybd_event(VK_CAPITAL,0,0,0);
+		keybd_event(VK_CAPITAL,0,KEYEVENTF_KEYUP,0);
+	};
 	return 0;
 }
  
