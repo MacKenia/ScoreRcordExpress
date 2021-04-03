@@ -86,7 +86,10 @@ void FirstLetter(int nCode, char& strLetter)
 	if(nCode >= 4684 && nCode < 4925) strLetter = 'X';
 	if(nCode >= 4925 && nCode < 5249) strLetter = 'Y';
 	if(nCode >= 5249 && nCode < 5590) strLetter = 'Z';
-	if(nCode == 7282||nCode == 8646) strLetter = 'X';
+	{
+		//请将优化程序的代码放到这里
+		if(nCode == 7282||nCode == 8646) strLetter = 'X';
+	}	
 }
 
 int main()
@@ -107,6 +110,7 @@ int main()
 		GetFirstLetter(pTemp,pTemp1,5);
 		strcpy(example.Cname,pTemp);
 		strcpy(example.Ename, pTemp1);
+		if(!(int)pTemp[0]) continue;
 		scores.push_back(example);
 	}
 	file.close();
