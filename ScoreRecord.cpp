@@ -47,14 +47,7 @@ void GetFirstLetter(char* strName, char* strFirstLetter, int nLen)
 	{
 		ucHigh = (int)(strName[i + 0] & 0xFF);
 		ucLow = (int)(strName[i + 1] & 0xFF);
-		if(ucHigh < 0xa1 || ucLow < 0xa1)
-		{
-			continue;
-		}
-		else
-		{
-			nCode = (ucHigh - 0xa0) * 100 + ucLow - 0xa0;
-		}
+		nCode = (ucHigh - 0xa0) * 100 + ucLow - 0xa0;
 		FirstLetter(nCode, strRet);
 		strFirstLetter[len] = strRet;
 		len ++;  
