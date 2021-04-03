@@ -29,4 +29,5 @@ Excel表格会将回车后面的信息自动录入到下一个格子中，于是
 
 ![s-s-copy](https://github.com/MacKenia/ScoreRcordExpress/blob/main/img/s-paste.gif)
 
-## 注意：由于本程序使用的是GBK2312编码版本较老，有些字的首拼无法识别，可联系我定制版本或者自己修改源代码或者采用同音字替换！
+## 注意：由于本程序使用的是GBK2312编码版本较老，有些字的首拼无法识别，可以使用repair程序优化代码，将程序输出的代码放入ScoreRcord.cpp的优化代码填写区域，编译即可。
+
