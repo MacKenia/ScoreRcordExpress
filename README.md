@@ -1,4 +1,4 @@
-# ScoreRcordExpress
+# ScoreRecordExpress
 ## A program for quick score recording
 
  [![GitHub](https://img.shields.io/github/license/MacKenia/ScoreRcordExpress)](https://github.com/MacKenia/ScoreRcordExpress/blob/main/LICENSE)
