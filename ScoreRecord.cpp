@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <windows.h>
+#include <cmath>
 
 using namespace std;
 struct score{
@@ -18,12 +19,35 @@ struct score{
 vector<score> scores;
 vector<score>::iterator p;
 
+int getn()
+{
+	int r, len;
+	bool f = true;
+	char tmp[10];
+	cin >> tmp;
+	len = strlen(tmp);
+	for(int i = 0; i < len; i++)
+	{
+		if(!(tmp[i]>='0' && tmp[i] <= '9'))
+		{
+			cout << "è¾“å…¥æœ‰è¯¯è¯·é‡æ–°è¾“å…¥: " ;
+			r = getn();
+			f = false;
+			break;
+		}
+	}
+	if(f) for(int i = 0; i < len; i++)
+	{
+		r += (int)(tmp[i]-'0')*pow(10,len-i-1);
+	}
+	return r;
+}
 
 int show(score stut)
 { 
-    cout << "ÐÕÃû: " << stut.Cname << endl
-    << "¼òÆ´: " << stut.Ename << endl
-    << "³É¼¨: " << stut.Score << endl << endl;
+    cout << "ï¿½ï¿½ï¿½ï¿½: " << stut.Cname << endl
+    << "ï¿½ï¿½Æ´: " << stut.Ename << endl
+    << "ï¿½É¼ï¿½: " << stut.Score << endl << endl;
     return 1;
 }
 
@@ -80,7 +104,7 @@ void FirstLetter(int nCode, char& strLetter)
 	if(nCode >= 4925 && nCode < 5249) strLetter = 'Y';
 	if(nCode >= 5249 && nCode < 5590) strLetter = 'Z';
 	{
-		//Çë½«ÓÅ»¯³ÌÐòµÄ´úÂë·Åµ½ÕâÀï
+		//ï¿½ë½«ï¿½Å»ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½
 		if(nCode == 7282||nCode == 8646) strLetter = 'X';
 	}	
 }
@@ -89,11 +113,11 @@ int main()
 {
 	fstream file;
 	char pTemp[10], QR[5];
-	char pTemp1[5];//±£´æºº×ÖµÄÊ××ÖÄ¸
-	cout << "Çë½«ÐÕÃû·ÅÈëname.txt±£´æÍË³ö" << endl
-	<< "ÈôÓÐ¼òÆ´ÏàÍ¬Õß" << endl
-	<<"Çë¼ÓÒ»¸ö×ÖÔÚÆäÃû×ÖÖÐ¼ÓÒÔÇø·Ö" << endl
-	<<"»Ø³µÒÔ¼ÌÐø";
+	char pTemp1[5];//ï¿½ï¿½ï¿½æººï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ä¸
+	cout << "ï¿½ë½«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½name.txtï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½" << endl
+	<< "ï¿½ï¿½ï¿½Ð¼ï¿½Æ´ï¿½ï¿½Í¬ï¿½ï¿½" << endl
+	<<"ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" << endl
+	<<"ï¿½Ø³ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½";
 	cin.get();
 	file.open("name.txt",ios::in);
 	while(!file.eof())
@@ -108,7 +132,7 @@ int main()
 	}
 	file.close();
 	showRecord();
-	cout << "ÏÖÔÚ¿ªÊ¼Â¼Èë³É¼¨£¬ÇëÒÔ´óÐ´µÄ·½Ê½ÊäÈë¼òÆ´(ÊäÈë£¡ÍË³ö£¬)£º" << endl;
+	cout << "ï¿½ï¿½ï¿½Ú¿ï¿½Ê¼Â¼ï¿½ï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½Ð´ï¿½Ä·ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½Æ´(ï¿½ï¿½ï¿½ë£¡ï¿½Ë³ï¿½ï¿½ï¿½)ï¿½ï¿½" << endl;
 	if(!GetKeyState(VK_CAPITAL))
 	{
 		keybd_event(VK_CAPITAL,0,0,0);
@@ -117,21 +141,21 @@ int main()
 	while(true)
 	{
 		int S;
-		cout << "ÇëÊäÈëÍ¬Ñ§µÄ¼òÆ´£º";
+		cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ñ§ï¿½Ä¼ï¿½Æ´ï¿½ï¿½";
 		cin >> QR;
 		if(QR[0] == '!') break;
 		cin.ignore();
 		p = find(scores.begin(),scores.end(),QR);
 		while(strcmp(p->Ename,QR)) 
 		{
-			cout << "ÎªÕÒµ½¸ÃÍ¬Ñ§£¬ÇëºË¶Ô£¡»òÕßÖØÐÂÊäÈë£º";
+			cout << "Îªï¿½Òµï¿½ï¿½ï¿½Í¬Ñ§ï¿½ï¿½ï¿½ï¿½Ë¶Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£º";
 			cin >> QR;
 			cin.ignore();
 			p = find(scores.begin(),scores.end(),QR);
 		}
-		cout << "¸ÃÍ¬Ñ§µÄÃû×ÖÎª: " << p->Cname << endl;
-		cout << "ÇëÊäÈë³É¼¨: ";
-		cin >> S;
+		cout << "ï¿½ï¿½Í¬Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª: " << p->Cname << endl;
+		cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½: ";
+		S = getn();
 		p -> Score = S;
 	}
 	showRecord();
